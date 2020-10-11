@@ -13,19 +13,4 @@ sudo systemctl restart apache2
 #create database for elgg 
 echo "create database elgg;"| mysql -u root -p"Luonghuuquan1!"
 echo "GRANT ALL PRIVILEGES on elgg.* to 'quan_ellg'@'localhost' identified by 'Luonghuuquan1!';"|mysql -u root -p"Luonghuuquan1!"
-#dowload the lastest version ellg 
-cd /var/www/html 
-sudo rm -r index.html 
-sudo wget https://elgg.org/download/elgg-2.3.7.zip
-sudo apt install unzip
-unzip elgg-2.3.7.zip
-sudo mv ./elgg-2.3.7/* . && rm elgg-2.3.7.zip && rm -r elgg-2.3.7
-#Create a data directory for Elgg.
-sudo mkdir -p /var/www/html/data
-sudo chown -R www-data:www-data /var/www/html/
-sudo chmod -R 755 /var/www/html/
-#Configure Apache for Elgg
-sudo a2enmod rewrite 
-mv ./elgg.conf /etc/apache2/sites-available/elgg.conf 
- sudo a2ensite elgg.conf
- sudo systemctl restart apache2.service
+

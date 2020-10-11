@@ -19,6 +19,7 @@ sudo rm -r index.html
 sudo wget https://elgg.org/download/elgg-2.3.7.zip
 sudo apt install unzip
 unzip elgg-2.3.7.zip
+sudo mv ./elgg-2.3.7/* . && rm elgg-2.3.7.zip && rm -r elgg-2.3.7
 #Create a data directory for Elgg.
 sudo mkdir -p /var/www/html/data
 sudo chown -R www-data:www-data /var/www/html/

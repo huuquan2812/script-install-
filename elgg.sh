@@ -9,4 +9,4 @@ systemctl status apche2
 #install mysql 
 sudo apt install mysql-server -y
 #install php
-sudo apt-get install php7.2 
+sudo apt-get install php7.2-cli 

@@ -11,7 +11,7 @@ sudo add-apt-repository ppa:ondrej/php
 sudo apt install update 
 sudo apt-get install php7.2 -y
 #enmod php7.2 
-sudo a2enmod php7.2 
+sudo a2enmod php7.4 
 sudo systemctl restart apache2 
 #config database for elgg
 echo "CREATE DATABASE elgg;"|mysql -u root -p"Luonghuuquan1!" |true 
@@ -30,4 +30,5 @@ sudo chmod -R 755 /var/www/html/elgg/
 sudo a2enmod rewrite
 sudo mv /tmp/elgg.conf /etc/apache2/sites-available/
  sudo a2ensite elgg.conf
+ sudo a2dissite 000-default.conf 
   sudo systemctl restart apache2.service

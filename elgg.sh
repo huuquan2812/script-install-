@@ -1,12 +1,13 @@
-#!/bin/bash 
-#update&&upgrade system 
-sudo apt-get update -y 
-sudo apt-get upgrade -y
-#install lamp sever 
+#update system 
+sudo apt update -y 
+sudo apt upgrade -y 
 #install apache2 
-sudo apt install apache2 
-systemctl status apche2 
+sudo apt install apache2 -y
+sudo status apache2 
 #install mysql 
-sudo apt install mysql-server -y
-#install php
-sudo apt-get install php7.2-cli 
+sudo  apt-get install mysql-server -y
+#install php 
+sudo add-apt-repository ppa:ondrej/php
+sudo apt install update 
+sudo apt-get install php7.2
+

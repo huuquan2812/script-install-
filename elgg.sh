@@ -23,9 +23,9 @@ sudo rm -r index.html
 sudo wget https://elgg.org/download/elgg-2.3.7.zip
 sudo apt install unzip
 unzip elgg-2.3.7.zip
-sudo mv ./elgg-2.3.7/* . && rm elgg-2.3.7.zip && rm -r elgg-2.3.7
+sudo mv ./elgg-2.3.7/* . && sudo rm elgg-2.3.7.zip && sudo rm -r elgg-2.3.7
 #create data directory 
-sudo mkdir -p /var/www/html/data
+sudo mkdir -p /var/www/html/data 
 sudo chown -R www-data:www-data /var/www/html/
 sudo chmod -R 755 /var/www/html/
 #config acpche for elgg 

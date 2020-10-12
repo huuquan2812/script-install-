@@ -18,16 +18,14 @@ echo "CREATE DATABASE elgg;"|mysql -u root -p"Luonghuuquan1!" |true
 echo "GRANT ALL PRIVILEGES on elgg.* to 'elgg_quan'@'localhost' identified by 'Luonguuquan1!';"|mysql -u root -p"Luonghuuquan1!" 
 echo "FLUSH PRIVILEGES;"|mysql -u root -p"Luonghuuquan1!"
 #instal elgg 
-cd /var/www/html
-sudo rm -r index.html 
-sudo wget https://elgg.org/download/elgg-2.3.7.zip
-sudo apt install unzip
-unzip elgg-2.3.7.zip -y
-sudo mv ./elgg-2.3.7/* . && sudo rm elgg-2.3.7.zip && sudo rm -r elgg-2.3.7
+cd /tmp
+sudo wget https://elgg.org/download/elgg-2.3.9.zip
+unzip elgg-2.3.9.zip
+sudo cp -r elgg-2.3.9 /var/www/html/elgg
+sudo mkdir /var/www/html/elgg/data
 #create data directory 
-sudo mkdir -p /var/www/html/data 
-sudo chown -R www-data:www-data /var/www/html/
-sudo chmod -R 755 /var/www/html/
+sudo chown -R www-data:www-data /var/www/html/elgg/ 
+sudo chmod -R 755 /var/www/html/elgg/
 #config acpche for elgg 
 sudo a2enmod rewrite
 sudo mv /tmp/elgg.conf /etc/apache2/sites-available/

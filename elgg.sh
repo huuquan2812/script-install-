@@ -1,3 +1,4 @@
+#install and config elgg 
 #update system 
 sudo apt update -y 
 sudo apt upgrade -y 

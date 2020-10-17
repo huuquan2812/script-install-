@@ -3,6 +3,6 @@
 sudo apt update 
 sudo apt upgrade 
 #install docker 
-sudo apt install docker.io
+sudo apt install docker.io -y
 sudo systemctl enable --now docker
 sudo usermod -aG docker huuquan
